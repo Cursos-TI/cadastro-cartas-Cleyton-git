@@ -5,7 +5,7 @@ int main(){
     char codigo_carta[10];
     char nome_cidade[32];
     int populacao, pontos_turisticos;
-    float area_km, pib;
+    float area_km, pib, densidade_populacional, pib_per_capita;
 
     printf("----------SUPER TRUNFO----------\n");
     printf("Digite o ESTADO: ");
@@ -23,6 +23,9 @@ int main(){
     printf("Digite o PIB do estado: ");
     scanf("%f", &pib);
 
+    densidade_populacional = (float) populacao / area_km;
+    pib_per_capita = pib / (float) populacao;
+
     printf("O estado é %s\n", estado);
     printf("O codigo da carta é %s\n", codigo_carta);
     printf("O nome de uma cidade é %s\n", nome_cidade);
@@ -30,5 +33,7 @@ int main(){
     printf("O estado tem %i pontos turisticos\n", pontos_turisticos);
     printf("O estado tem %.2fKM de area\n", area_km);
     printf("O PIB do estado é de %.2f\n", pib);
+    printf("A densidade populacional do estado é de %.2f\n", densidade_populacional);
+    printf("O pib per capita do estado é de %.2f\n", pib_per_capita);
     return 0;
 }
