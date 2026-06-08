@@ -6,6 +6,7 @@ int main(){
     char nome_cidade[32];
     int populacao, pontos_turisticos;
     float area_km, pib, densidade_populacional, pib_per_capita;
+    float super_poder;
 
     printf("----------SUPER TRUNFO----------\n");
     printf("Digite o ESTADO: ");
@@ -25,6 +26,7 @@ int main(){
 
     densidade_populacional = (float) populacao / area_km;
     pib_per_capita = pib / (float) populacao;
+    super_poder = populacao + (int) area_km + (int) pib + pontos_turisticos + pib_per_capita + (int) (1 / densidade_populacional);
 
     printf("O estado é %s\n", estado);
     printf("O codigo da carta é %s\n", codigo_carta);
@@ -35,5 +37,7 @@ int main(){
     printf("O PIB do estado é de %.2f\n", pib);
     printf("A densidade populacional do estado é de %.2f\n", densidade_populacional);
     printf("O pib per capita do estado é de %.2f\n", pib_per_capita);
+    printf("O super poder dessa carta é: %.0f\n", super_poder);
+
     return 0;
 }
